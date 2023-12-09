@@ -1,0 +1,7 @@
+- import font awesome as JS+CSS
+- create a repository folder with the icons
+- define the shared interface
+- create subdomain files with different icons
+- spread the objects together
+- define a main app that gets an array of props (the icons) to instantiate parametrically
+- allow the icons to change statefully with a dropdown
