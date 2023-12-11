@@ -5,7 +5,7 @@ Powered by GrandeOmega.com
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client'
-import { Icon, RenderIcon } from './icons/Icons';
+import { Icon, IconComponent, RenderIcon } from './icons/Icons';
 import { IconComponentType } from './icons/shared/IconComponent';
 import { swapArgs } from './swapArgs';
 
@@ -37,6 +37,7 @@ const Method0 = (props:{ icon1:Icon, icon2:Icon }) => {
       */}
     <Icon1 zoom="3x" />
     <Icon2 zoom="3x" />
+    <IconComponent icon="Bed" zoom="3x" />
   </div>;
 }
 
