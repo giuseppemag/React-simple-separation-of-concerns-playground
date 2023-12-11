@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client'
 import { Icon, RenderIcon } from './icons/Icons';
-import { IconComponent } from './icons/shared/IconComponent';
+import { IconComponentType } from './icons/shared/IconComponent';
 import { swapArgs } from './swapArgs';
 
 

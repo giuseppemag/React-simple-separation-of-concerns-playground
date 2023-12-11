@@ -12,6 +12,7 @@ var spa;
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   RenderIcon: () => (/* binding */ RenderIcon)
 /* harmony export */ });
+/* unused harmony export IconComponent */
 /* harmony import */ var _ObjectIcons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ObjectIcons */ "./icons/ObjectIcons.tsx");
 /* harmony import */ var _UserIcons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserIcons */ "./icons/UserIcons.tsx");
 
@@ -21,6 +22,7 @@ const AllIcons = {
   ..._ObjectIcons__WEBPACK_IMPORTED_MODULE_0__.ObjectIcons
 };
 const RenderIcon = icon => AllIcons[icon];
+const IconComponent = props => RenderIcon(props.icon)(props);
 
 /***/ }),
 
