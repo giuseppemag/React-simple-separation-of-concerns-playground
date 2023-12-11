@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client'
 import { Icon, IconComponent, RenderIcon } from './icons/Icons';
-import { IconComponentType } from './icons/shared/IconComponent';
+import { IconComponentProps, IconComponentType } from './icons/shared/IconComponent';
 import { swapArgs } from './swapArgs';
 
 
@@ -78,3 +78,39 @@ function Method3(props:{ icons: Array<Icon> }) {
     )}
   </div>;
 }
+
+
+// BaseInputState.ts
+type BaseInputProps = {
+  param1:number,
+  param2:string,
+  startAdornment:AdornmentType
+}
+type AdornmentType = (size:number) => JSX.Element
+
+// BaseInputTemplate.tsx
+const BaseInput = (props:BaseInputProps) : JSX.Element =>
+  <></>
+
+const Foo = () => {
+  <BaseInput
+    param1={10}
+    param2='something else'
+    startAdornment={IconToAdornment(RenderIcon("Bed"))}
+  />
+}
+
+const Foo2 = () => {
+  <BaseInput
+    param1={10}
+    param2='something else'
+    startAdornment={IconToAdornment(RenderIcon("OutlineNinja"))}
+  />
+}
+
+function IconToAdornment(iconComponent: IconComponentType): AdornmentType {
+  return size => iconComponent({ zoom:ICON_SIZES_TO_ZOOM(size) })
+}
+
+const ICON_SIZES_TO_ZOOM = (size:number) : IconComponentProps["zoom"] => 
+  size <= 10 ? "1x" : size <= 50 ? "2x" : "3x"
